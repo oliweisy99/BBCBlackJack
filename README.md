@@ -1,4 +1,6 @@
-To run application, follow these steps:
+To 
+
+To run django application, follow these steps:
 
 1. Open application code in your IDE
 
