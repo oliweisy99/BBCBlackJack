@@ -7,6 +7,7 @@ To run application, follow these steps:
 
 3. Run these two commands in the terminal to setup the database:
 `python manage.py makemigrations`
+and then:
 `python manage.py migrate`
 
 4. Now you're ready to run the program. Run this command in the terminal:
