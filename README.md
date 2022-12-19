@@ -1,6 +1,6 @@
 
 
-### How to run pure python project:
+### How To Run (Pure) Python Project:
 
 1. Download the zip file of the project via github
    1. Click the green '<> Code' dropdown button
@@ -10,7 +10,7 @@
 
 It's as simple as that!
 
-### How to run django application:
+### How To Run Django Application:
 
 Make sure you have python3 installed. To do this, run the following command: 
 `python3 --version`
