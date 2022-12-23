@@ -5,8 +5,8 @@
 1. Download the zip file of the project via github
    1. Click the green '<> Code' dropdown button
    2. Click "Download Zip"
-2. Open a terminal window and navigate to the project using the `cd` command.
-3. Run the code using this command `python3 BlackJack.py`
+2. Open a terminal window and navigate to the PurePythonProject directory using the `cd` command.
+3. Run the code using this command in the terminal: `python3 BlackJack.py`
 
 It's as simple as that!
 
@@ -25,7 +25,7 @@ and then:\
    1. If you had trouble using venv, it is likely you'll need to run `pip install venv` first!
 5. Run this command in the terminal to download all requirements:
 `pip install -r requirements.txt`
-6. Run these two commands in the terminal to setup the database:
+6. Run these two commands in the terminal to set up the database:
 `python manage.py makemigrations`
 and then:
 `python manage.py migrate`

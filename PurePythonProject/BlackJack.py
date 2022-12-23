@@ -1,9 +1,10 @@
+from Game import Game
 from src.Deck import Deck
 
 
 def play():
-    print('Hello, potential future BBC developer!')
-
+    newGame = Game()
+    newGame.playGame()
 
 if __name__ == '__main__':
     play()
