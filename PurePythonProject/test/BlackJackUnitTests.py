@@ -1,11 +1,7 @@
 import unittest
-from unittest import mock
 
 from Deck import Deck
 from Game import Game
-
-def hitOrStand(hitOrStand):
-    return input(hitOrStand)
 
 class GameTestCase(unittest.TestCase):
 
