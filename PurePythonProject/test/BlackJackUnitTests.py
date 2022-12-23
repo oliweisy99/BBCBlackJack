@@ -69,29 +69,48 @@ class GameTestCase(unittest.TestCase):
     def testHandBelow21(self):
         self.game.player.hand.addCard(('Three', 3))
         self.game.player.hand.addCard(('King', 10))
+        self.assertEqual(self.game.player.hand.points, 13)
+        self.assertTrue(self.game.player.hand.checkPoints())
 
-        self.assertTrue(self.game.player.hand.checkPoints)
+    def testHandAbove21(self):
+        self.game.player.hand.addCard(('Three', 3))
+        self.game.player.hand.addCard(('King', 10))
+        self.game.player.hand.addCard(('Nine', 9))
+        self.assertEqual(self.game.player.hand.points, 22)
+        self.assertFalse(self.game.player.hand.checkPoints())
+
+    def testHandEqualTo21(self):
+        self.game.player.hand.addCard(('King', 10))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.game.player.hand.addCard(('Queen', 10))
+        self.assertEqual(self.game.player.hand.points, 21)
+        self.assertEqual(self.game.player.hand.checkPoints(), 21)
+
+    def testOneAceAnd10Card(self):
+        self.game.player.hand.addCard(('King', 10))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.assertTrue(self.game.player.hand.aceCheck())
+
+    def testTwoAcesAnd10Card(self):
+        self.game.player.hand.addCard(('King', 10))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.assertEqual(self.game.player.hand.points, 12)
+        self.assertFalse(self.game.player.hand.aceCheck())
+
+    def testTwoAcesAndNine(self):
+        self.game.player.hand.addCard(('Nine', 9))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.assertTrue(self.game.player.hand.aceCheck())
+
+    def testOneAceAndTwo10Cards(self):
+        self.game.player.hand.addCard(('King', 10))
+        self.game.player.hand.addCard(('Queen', 10))
+        self.game.player.hand.addCard(('Ace', 1))
+        self.assertEqual(self.game.player.hand.points, 21)
+        self.assertEqual(self.game.player.hand.checkPoints(), 21)
+
 
 if __name__ == '__main__':
     unittest.main()
-
-#
-# Given my score is updated or evaluated
-# When it is 21 or less
-# Then I have a valid hand
-#
-# Given my score is updated
-# When it is 22 or more
-# Then I am ‘bust’ and do not have a valid hand
-#
-# Given I have a king and an ace
-# When my score is evaluated
-# Then my score is 21
-#
-# Given I have a king, a queen, and an ace
-# When my score is evaluated
-# Then my score is 21
-#
-# Given that I have a nine, an ace, and another ace
-# When my score is evaluated
-# Then my score is 21
