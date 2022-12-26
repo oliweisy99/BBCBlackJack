@@ -1,0 +1,1 @@
+const playerNameField = document.getElementById('playerNameField')

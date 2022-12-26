@@ -2,7 +2,6 @@ from functools import reduce
 
 
 class Hand:
-
     def __init__(self):
         self.cards = []
         self.points = 0
@@ -23,7 +22,6 @@ class Hand:
                     tempPoints += 1
             else:
                 tempPoints += card[1]
-
         if tempPoints == 21:
             return True
         else:

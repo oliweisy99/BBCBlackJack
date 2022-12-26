@@ -9,7 +9,6 @@ class Game:
         self.player = Player()
         self.highScore = 0
 
-
     def playGame(self):
         self.initialisation()
 

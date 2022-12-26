@@ -16,9 +16,9 @@ Make sure you have python3 installed. To do this, run the following command:
 `python3 --version`
 After opening your chosen IDE (I used PyCharm), follow these instructions: 
 
-1. Using the terminal, clone the repository using these commands in the terminal (if you've already done this step, feel free to skip this!):
+1. Using the terminal, clone the repository using these commands (if you've already done this step, feel free to skip this!):
 `git clone https://github.com/oliweisy99/BBCBlackJack.git` 
-2. Create your own virtual environment using these commands: 
+2. Create your own virtual environment by typing these commands into the terminal: 
 `python3 -m venv venv`
 and then:\
 `source venv/bin/activate`
