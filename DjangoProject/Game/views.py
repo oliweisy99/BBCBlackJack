@@ -1,7 +1,10 @@
 from django.http import JsonResponse
 
 
-# Create your views here.
-def playGame(request):
-    name = request.POST['name']
-    return JsonResponse({"name":name})
+from Deck.models import Card
+
+
+def playGame(request,name):
+
+    cards = Card.objects.all()
+    return JsonResponse({"name":name, "cards": list(cards.values())})

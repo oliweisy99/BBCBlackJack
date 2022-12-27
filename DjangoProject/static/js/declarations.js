@@ -1,1 +1,7 @@
 const playerNameField = document.getElementById('playerNameField')
+const gamePlayDiv = document.getElementById('gamePlayDiv')
+const resultDiv = document.getElementById('resultDiv')
+const choiceDiv = document.getElementById('choiceDiv')
+const pointsDiv = document.getElementById('pointsDiv')
+const highScorePlayerName = document.getElementById('highScorePlayerName')
+const highScorePoints = document.getElementById('highScorePoints')
