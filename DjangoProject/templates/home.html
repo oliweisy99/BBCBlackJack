@@ -5,12 +5,17 @@
 
 	<div class="container" style="margin-top: 50px;margin-bottom: 25px;">
 		<h1 class="text-center">Let's Play!</h1>
-		<h5 class="text-center"><strong>High Score:</strong>
-			<span id="highScorePlayerName">Le</span>
-			<span id="highScorePoints">0</span>
+		<h5 class="text-center">
+			<strong>High Score:</strong>
+			<span id="highScorePlayerName"></span>
+			<span id="highScorePoints"></span>
+		</h5>
+		<h5 class="text-center" id="currentScore">
+			<strong>Current Score:</strong>
+			<span id="currentPlayerScore"></span>
 		</h5>
 	</div>
-	<div class="container text-center" style="margin-top: 20px;margin-bottom: 37px;">
+	<div class="container text-center" style="margin-top: 20px;margin-bottom: 37px;" id="gameSetup">
 		<form action="" method="get" class="justify-content-center" style="margin: auto">
 			{% csrf_token %}
 			<label for="add-comment"><em>Type Your Name</em></label>
@@ -21,31 +26,25 @@
 		</form>
 	</div>
 	<div class="container" id="gamePlayDiv" style="">
-		<h3 style="text-align: center;"><em>Dealer: points</em></h3>
-		<div style="text-align: center;margin-bottom: 19px;">
-			<img class="img-fluid" src=""
-			     style="margin-right: 15px;max-width: 150px;margin-top: 10px;" alt="">
-			<img class="img-fluid" src=""
-			     style="margin-right: 15px;max-width: 150px;margin-top: 10px;" alt="">
+		<h3 style="text-align: center;"><strong><em>Dealer:&nbsp;</em></strong><span id="dealerPoints"></span></h3>
+		<div style="text-align: center;margin-bottom: 20px;" id="dealerCards">
+
 		</div>
-		<h3 style="text-align: center;"><em>[Player Name]:</em>&nbsp;points</h3>
-		<div style="text-align: center;margin-bottom: 19px;">
-			<img class="img-fluid"
-			     src=""
-			     style="margin-right: 15px;max-width: 150px;margin-top: 10px;" alt="">
-			<img class="img-fluid" src=""
-			     style="margin-right: 15px;max-width: 150px;margin-top: 10px;" alt="">
+		<h3 style="text-align: center;"><strong><em id="playerName"></em></strong>&nbsp;<span id="playerPoints"></span>
+		</h3>
+		<div style="text-align: center;margin-bottom: 20px;" id="playerCards">
+
 		</div>
 
 	</div>
 	<div class="container" style="margin-top: 50px;margin-bottom: 25px;" id="resultDiv">
-		<h1 class="text-center">Bust! Win! Blackjack!</h1>
+		<h1 class="text-center" id="resultText"></h1>
 	</div>
 	<div class="container" style="margin-top: 50px;margin-bottom: 25px;" id="pointsDiv">
 		<h5 class="text-center">Current points: 7</h5>
 	</div>
 	<div class="container text-center" style="margin-top: 20px;margin-bottom: 37px;" id="choiceDiv">
-		<button class="btn btn-dark" type="button">Hit</button>
-		<button class="btn btn-dark" type="button" style="margin-left: 14px;">Stand</button>
+		<button class="btn btn-dark" type="button" onclick="hit()">Hit</button>
+		<button class="btn btn-dark" type="button" style="margin-left: 14px;" onclick="stand()">Stand</button>
 	</div>
 {% endblock %}
