@@ -35,7 +35,7 @@ and then:
 If further errors are encountered, make sure you follow the installation guidance here: https://docs.djangoproject.com/en/4.1/intro/install/
 
 
-![BlackJackgameplay](https://github.com/oliweisy99/BBCBlackJack/blob/main/githubPhotos/img_1.png?raw=true)
+![BlackJackgameplay](https://github.com/oliweisy99/BBCBlackJack/blob/main/gameplayPhotos/img_1.png?raw=true)
 
 #### Versions:
 
