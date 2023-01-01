@@ -36,8 +36,6 @@ If further errors are encountered, make sure you follow the installation guidanc
 
 
 ![BlackJackgameplay](https://github.com/oliweisy99/BBCBlackJack/blob/main/githubPhotos/img_1.png?raw=true)
-![BlackJackgameplay2](https://github.com/oliweisy99/BBCBlackJack/blob/main/githubPhotos/img_2.png?raw=true)
-
 
 #### Versions:
 
