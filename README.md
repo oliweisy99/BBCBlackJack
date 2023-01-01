@@ -35,6 +35,10 @@ and then:
 If further errors are encountered, make sure you follow the installation guidance here: https://docs.djangoproject.com/en/4.1/intro/install/
 
 
+![BlackJackgameplay](https://github.com/oliweisy99/BBCBlackJack/blob/main/DjangoProject/media/img_1.png?raw=true)
+![BlackJack gameplay two](https://github.com/oliweisy99/BBCBlackJack/blob/main/DjangoProject/media/img_2.png?raw=true)
+
+
 #### Versions:
 
 Django: 4.1.4 \
