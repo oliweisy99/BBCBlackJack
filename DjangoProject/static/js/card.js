@@ -6,6 +6,26 @@ function addCardToPage(card, player) {
 	}
 }
 
+function showHiddenCard() {
+	const hiddenCard = document.getElementById('hiddenCard')
+	hiddenCard.remove()
+	dealerCards.prepend(secretCard)
+
+}
+
+
+function addHiddenCard() {
+	const el = document.createElement('img');
+	el.id = "hiddenCard"
+	el.classList.add("img-fluid")
+	el.style.marginRight = "15px"
+	el.style.marginTop = "10px"
+	el.style.maxWidth = "150px"
+	el.src = "/media/card_back.png/"
+	dealerCards.appendChild(el)
+}
+
+
 function createCardToAdd(url) {
 
 	const el = document.createElement('img');
@@ -37,6 +57,7 @@ function shuffleDeck(cards) {
 
 function getNewCards() {
 	newDeck = cards
+
 	return shuffleDeck(newDeck)
 }
 

@@ -28,8 +28,8 @@
 	<div class="container" id="gamePlayDiv" style="">
 		<h3 style="text-align: center;"><strong><em>Dealer:&nbsp;</em></strong><span id="dealerPoints"></span></h3>
 		<div style="text-align: center;margin-bottom: 20px;" id="dealerCards">
-
 		</div>
+
 		<h3 style="text-align: center;"><strong><em id="playerName"></em></strong>&nbsp;<span id="playerPoints"></span>
 		</h3>
 		<div style="text-align: center;margin-bottom: 20px;" id="playerCards">
@@ -46,5 +46,11 @@
 	<div class="container text-center" style="margin-top: 20px;margin-bottom: 37px;" id="choiceDiv">
 		<button class="btn btn-dark" type="button" onclick="hit()">Hit</button>
 		<button class="btn btn-dark" type="button" style="margin-left: 14px;" onclick="stand()">Stand</button>
+	</div>
+	<div class="container text-center" style="margin-top: 20px;margin-bottom: 37px;" id="restartDiv">
+		<button class="btn btn-dark" type="button" onclick="playAgain()">Play Again</button>
+	</div>
+	<div class="container text-center" style="margin-top: 20px;margin-bottom: 37px;" id="continuePlayingDiv">
+		<button class="btn btn-dark" type="button" onclick="continuePlaying()">Continue Playing</button>
 	</div>
 {% endblock %}

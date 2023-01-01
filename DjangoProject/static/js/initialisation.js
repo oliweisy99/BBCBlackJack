@@ -5,7 +5,9 @@ $(document).ready(function setUpPage() {
 	choiceDiv.style.display = "none"
 	pointsDiv.style.display = "none"
 	currentScore.style.display = "none"
-
+	continuePlayingDiv.style.display = "none"
+	restartDiv.style.display = "none"
+	getHighScore()
 })
 
 function playGame() {
@@ -26,28 +28,28 @@ function playGame() {
 		}
 	});
 
-	// take the user's Name
-	// deal the dealers cards
-	// get the cards!
-	// deal the user their cards
-	// display the hit / stand buttons
 }
 
 function initialisation() {
+	getNewCards()
 	gameSetup.style.display = "none"
+
 	gamePlayDiv.style.display = ""
 	choiceDiv.style.display = ""
 	currentScore.style.display = ""
+
 	currentPlayerScore.innerText = playerPoints
 	playerNameElement.innerText = globalPlayerName + ":"
 	playerPointsElement.innerText = playerPoints
 	dealerPointsElement.innerText = dealerPoints
+
 
 	showInitialCards(true)
 	showInitialCards(false)
 }
 
 function showInitialCards(player) {
+	getNewCards()
 	var newCardOne = newDeck.pop()
 	var newCardTwo = newDeck.pop()
 	var cardOne = createCardToAdd(newCardOne.image)
@@ -57,12 +59,13 @@ function showInitialCards(player) {
 		addCardToPage(cardTwo, true)
 		setPoints(calculatePoints([newCardOne, newCardTwo]), true)
 	} else {
+		addHiddenCard()
 		addCardToPage(cardOne, false)
-		addCardToPage(cardTwo, false)
+		secretCard = cardTwo
 		setPoints(calculatePoints([newCardOne, newCardTwo]), false)
+		setHiddenPoints()
 	}
 }
-
 
 function generateDeck() {
 

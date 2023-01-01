@@ -1,4 +1,4 @@
-function hit(){
+function hit() {
 	var cardFromDeck = newDeck.pop()
 	var cardToAdd = createCardToAdd(cardFromDeck.image)
 	addCardToPage(cardToAdd, true)
@@ -7,13 +7,46 @@ function hit(){
 
 }
 
-function stand(){
+function stand() {
+	showHiddenCard()
+	showHiddenPoints()
+	checkPointsAgainstDealer()
+
+
+}
+
+function playAgain() {
+	//checkHighScore - use database to save it
+
+	playerPoints = 0
+	dealerPoints = 0
+
+	restartDiv.style.display = 'none'
+	resultDiv.style.display = 'none'
+
+	dealerCards.innerHTML = ''
+	playerCards.innerHTML = ''
+
+	playGame()
+	//clean cards
+	//add up score.
+
+}
+
+function continuePlaying() {
 	getNewCards()
-	//check dealers hand.
 
-	//show other dealer card.
+	dealerPoints = 0
+	playerPoints = 0
+	dealerCards.innerHTML = ''
+	playerCards.innerHTML = ''
+	showInitialCards(true)
+	showInitialCards(false)
 
-	//calculate points
-	//deal new hand
+	resultDiv.style.display = 'none'
+	continuePlayingDiv.style.display = 'none'
+
+	choiceDiv.style.display = ''
+
 
 }
