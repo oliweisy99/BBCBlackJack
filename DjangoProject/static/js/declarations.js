@@ -15,8 +15,6 @@ const dealerCards = document.getElementById('dealerCards')
 const playerCards = document.getElementById('playerCards')
 const resultText = document.getElementById('resultText')
 const continuePlayingDiv = document.getElementById('continuePlayingDiv')
-const dealerFlipCardFront = document.getElementById('dealerFlipCardFront')
-const dealerFlipCardBack = document.getElementById('dealerFlipCardBack')
 
 var globalPlayerName = ""
 var secretCard
@@ -25,4 +23,3 @@ var newDeck = []
 var totalPoints = 0
 var playerPoints = 0
 var dealerPoints = 0
-var highScore = 0

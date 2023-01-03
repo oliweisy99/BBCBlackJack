@@ -13,7 +13,7 @@ def generateCards(request):
              ('6', 6), ('7', 7), ('8', 8), ('9', 9), ('10', 10),
              ('jack', 10), ('queen', 10), ('king', 10)]
     cardDict = dict(cards)
-    print(cardDict["ace"])
+
 
     files = os.listdir(os.path.join(settings.MEDIA_ROOT, "../media/cardPNGs/"))
     cards = []

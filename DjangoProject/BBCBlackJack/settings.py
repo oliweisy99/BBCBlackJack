@@ -38,7 +38,6 @@ INSTALLED_APPS = [
 
     'Player.apps.PlayerConfig',
     'Game.apps.GameConfig',
-    'Hand.apps.HandConfig',
     'Deck.apps.DeckConfig',
     'User.apps.UserConfig',
     'allauth.account',
