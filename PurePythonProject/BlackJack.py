@@ -1,5 +1,4 @@
 from Game import Game
-from src.Deck import Deck
 
 
 def play():
