@@ -35,13 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'Player.apps.PlayerConfig',
     'Game.apps.GameConfig',
     'Deck.apps.DeckConfig',
-    'User.apps.UserConfig',
-    'allauth.account',
-    'allauth.socialaccount',
     'crispy_forms',
     'bootstrap4'
 ]

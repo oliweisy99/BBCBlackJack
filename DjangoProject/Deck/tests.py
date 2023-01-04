@@ -1,9 +1,5 @@
-import os
-
 from django.test import TestCase
 
-# Create your tests here.
-from BBCBlackJack import settings
 from .models import Card
 from .views import generateCards
 

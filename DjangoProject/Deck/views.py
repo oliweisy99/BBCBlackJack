@@ -14,7 +14,6 @@ def generateCards(request):
              ('jack', 10), ('queen', 10), ('king', 10)]
     cardDict = dict(cards)
 
-
     files = os.listdir(os.path.join(settings.MEDIA_ROOT, "../media/cardPNGs/"))
     cards = []
     for file in files:

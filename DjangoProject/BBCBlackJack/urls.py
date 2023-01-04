@@ -20,8 +20,8 @@ from django.conf.urls.static import static
 from BBCBlackJack.views import HomePageView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', HomePageView.as_view(), name='home'),
-    path('game/', include('Game.urls', namespace='game')),
-    path('deck/', include('Deck.urls', namespace='deck')),
-]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', HomePageView.as_view(), name='home'),
+                  path('game/', include('Game.urls', namespace='game')),
+                  path('deck/', include('Deck.urls', namespace='deck')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

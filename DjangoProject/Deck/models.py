@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Card(models.Model):
     suit = models.CharField("Suit", blank=True, null=True, max_length=250)
@@ -9,4 +10,3 @@ class Card(models.Model):
 
     def __str__(self):
         return str(self.name + " of " + self.suit)
-
