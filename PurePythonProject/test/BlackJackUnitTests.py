@@ -10,7 +10,6 @@ class GameTestCase(unittest.TestCase):
         self.deck = Deck()
         self.game = Game()
 
-
     def testNumberOfCards(self):  # any method beginning with 'test' will be run by unittest
         numberOfCards = len(self.deck.cards)
         self.assertEqual(numberOfCards, 52)
@@ -45,7 +44,6 @@ class HandTestCase(unittest.TestCase):
         self.game = Game()
 
     def testHitScoreUpdate(self):
-
         self.game.player.hand.addCard(('Three', 3))
         self.game.player.hand.addCard(('King', 10))
         self.assertEqual(self.game.player.hand.points, 13)
@@ -54,7 +52,6 @@ class HandTestCase(unittest.TestCase):
         self.assertEqual(self.game.player.hand.points, 22)
 
     def testStandScoreUpdate(self):
-
         self.game.player.hand.addCard(('Three', 3))
         self.game.player.hand.addCard(('King', 10))
         self.assertEqual(self.game.player.hand.points, 13)
