@@ -61,4 +61,3 @@ function getNewCards() {
 	return shuffleDeck(newDeck)
 }
 
-// end card function

@@ -12,11 +12,9 @@ function stand() {
 	showHiddenPoints()
 	checkPointsAgainstDealer()
 
-
 }
 
 function playAgain() {
-	//checkHighScore - use database to save it
 
 	playerPoints = 0
 	dealerPoints = 0
@@ -28,8 +26,6 @@ function playAgain() {
 	playerCards.innerHTML = ''
 
 	playGame()
-	//clean cards
-	//add up score.
 
 }
 
@@ -47,6 +43,5 @@ function continuePlaying() {
 	continuePlayingDiv.style.display = 'none'
 
 	choiceDiv.style.display = ''
-
 
 }
