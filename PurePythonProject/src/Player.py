@@ -14,10 +14,11 @@ class Player:
 
         choice = input("Would you like to hit or stand? (TYPE: H or S)")
 
-        if choice == "h" or choice == "H":
-            indexInDeck = self.numberOfCardsPlayed
+        if choice in ["h", "H"]:
 
-            # check if end of deck reached
+            indexInDeck = self.numberOfCardsPlayed  # collect the index position in the deck of the new card to deal
+
+            # try / except to catch if end of deck is reached
             try:
                 newCardToDeal = deck.cards[indexInDeck]  # get the next card in the (shuffled) deck
             except:
@@ -30,8 +31,7 @@ class Player:
             self.setNumberOfCardsPlayed(1)
             self.updateHand(newCardToDeal)
 
-            points = self.hand.checkPoints()
-            # check what points are in respect to 21.
+            points = self.hand.checkPoints()  # check what points are in respect to 21.
 
             if (self.hand.aceCheck()):
                 points = 21
@@ -49,7 +49,7 @@ class Player:
                     print(f"Uh oh, your hands points are {self.hand.points}")
                     return False
 
-        if choice == "S" or choice == "s":
+        if choice in ["s", "S"]:
             self.stand(self.hand.points)
             self.resetHand()
             print(f'Stand! Your total points are now : {self.score}')

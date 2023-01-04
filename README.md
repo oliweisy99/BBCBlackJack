@@ -42,5 +42,5 @@ If further errors are encountered, make sure you follow the installation guidanc
 
 #### Versions:
 
-Django: 4.1.4 \
+Django: 3.1.1 \
 Python: 3.8.5

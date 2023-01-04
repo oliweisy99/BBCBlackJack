@@ -1,5 +1,6 @@
 from random import shuffle
 
+
 class Deck:
 
     def __init__(self):
@@ -11,8 +12,6 @@ class Deck:
     def shuffleDeck(self):
         shuffle(self.cards)
 
-
     def resetDeck(self):
         deck = Deck()
         self.cards = deck.cards
-

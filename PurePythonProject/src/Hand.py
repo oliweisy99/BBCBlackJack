@@ -1,7 +1,5 @@
-from functools import reduce
-
-
 class Hand:
+
     def __init__(self):
         self.cards = []
         self.points = 0

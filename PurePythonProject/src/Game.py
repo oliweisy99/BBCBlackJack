@@ -23,7 +23,9 @@ class Game:
 
     def initialisation(self):
         print("Let's Play! \nHere is your hand:")
+
         self.deck.resetDeck()
+
         print(f'{self.deck.cards[0][0]} & {self.deck.cards[1][0]}')  # show the first two cards to the player
 
         # add cards to the hand
@@ -34,6 +36,7 @@ class Game:
 
     def playAgain(self):
         self.checkHighScore(self.player.score)
+
         playAgain = input("Would you like to play again? (TYPE: Y or N)")
 
         if playAgain == "y" or playAgain == "Y":
@@ -48,6 +51,7 @@ class Game:
             self.playAgain()
 
     def checkHighScore(self, points):
+
         if self.highScore < points:
             self.highScore = points
             print("New HighScore!")
